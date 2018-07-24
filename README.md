@@ -63,8 +63,6 @@ php FuriganizerTest3.php
 ### 姓名辞書を追加する
 * 準備中
 
-<br />
-
 ### ご利用について
 * 当サンプルはいかなる保証もおこなっておりません。
 * 当サンプルをご利用時は、利用者の責任においてご利用ください。
@@ -74,6 +72,7 @@ php FuriganizerTest3.php
 * [疑似個人情報生成 - 生成条件入力](https://hogehoge.tk/personal/generator/?)
 * [すごい名前生成器](https://namegen.jp/)
 
+<br />
 
 ## Licence
 * MIT
