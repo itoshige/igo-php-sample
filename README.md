@@ -29,7 +29,26 @@ git clone https://github.com/siahr/igo-php.git
 
 ## 実行方法
 * [igo-php](https://github.com/siahr/igo-php/tree/138ee9689c1dc8bf066049c65d9582fbfe34b851)の(2) PHPプログラムから呼び出す場合を参照
-*
+* 動作を確認したい場合は、[igo-php-sampleコード](https://github.com/itoshige/igo-php-sample/tree/master/test)を実行
+
+```
+# 実行例
+cd igo-php-sample/test/
+
+php FuriganizerTest1.php
+→以下のように、姓と名の間に半角スペースを入れて出力
+山田 太郎,ヤマダ タロウ
+
+## 姓と名の間にスペースがない場合の正解率を出力
+php FuriganizerTest2.php
+→以下のように、正解のひらがなとigo-phpが出力したひらがなを比較し正解数を、正解率として出力、正解の場合は右端に○を記載
+...
+[expected]kanji:松元勇二 kana:マツモト ユウジ   [mesured]kanji:松元 勇二 kana:マツモト ユウジ    ○
+正解率:71.75	正解数:287	母数:400
+
+## 珍しい名字、名前の正解率を出力（精度がよくない）
+php FuriganizerTest3.php
+```
 
 <br />
 
@@ -38,10 +57,23 @@ git clone https://github.com/siahr/igo-php.git
 #### 注意点
 * 精度は向上するが、十分なメモリを確保しないと実行できない
 
+#### 導入方法
+* [igo-pythonでmecab-ipadic-neologdをつかう](https://qiita.com/zabeth129/items/0d39e94862cb558015f0)を参考
 
 ### 姓名辞書を追加する
+* 準備中
 
 <br />
+
+### ご利用について
+* 当サンプルはいかなる保証もおこなっておりません。
+* 当サンプルをご利用時は、利用者の責任においてご利用ください。
+
+### テストデータ
+精度確認用に下記ツールを利用して、テストデータを生成しました。
+* [疑似個人情報生成 - 生成条件入力](https://hogehoge.tk/personal/generator/?)
+* [すごい名前生成器](https://namegen.jp/)
+
 
 ## Licence
 * MIT
