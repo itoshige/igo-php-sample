@@ -37,7 +37,7 @@ cd igo-php-sample/test/
 
 php FuriganizerTest1.php
 →以下のように、姓と名の間に半角スペースを入れて出力
-山田 太郎,ヤマダ タロウ
+田中 洋子,タナカ ヨウコ
 
 ## 姓と名の間にスペースがない場合の正解率を出力
 php FuriganizerTest2.php
@@ -45,9 +45,6 @@ php FuriganizerTest2.php
 ...
 [expected]kanji:松元勇二 kana:マツモト ユウジ   [mesured]kanji:松元 勇二 kana:マツモト ユウジ    ○
 正解率:71.75	正解数:287	母数:400
-
-## 珍しい名字、名前の正解率を出力（精度がよくない）
-php FuriganizerTest3.php
 ```
 
 <br />
@@ -55,7 +52,7 @@ php FuriganizerTest3.php
 ## 備考
 ### mecab-ipadic-neologdを利用する
 #### 注意点
-* 精度は向上するが、十分なメモリを確保しないと実行できない
+* 精度はさらに向上するが、十分なメモリを確保しないと実行できない
 
 #### 導入方法
 * [igo-pythonでmecab-ipadic-neologdをつかう](https://qiita.com/zabeth129/items/0d39e94862cb558015f0)を参考
@@ -70,7 +67,6 @@ php FuriganizerTest3.php
 ### テストデータ
 精度確認用に下記ツールを利用して、テストデータを生成しました。
 * [疑似個人情報生成 - 生成条件入力](https://hogehoge.tk/personal/generator/?)
-* [すごい名前生成器](https://namegen.jp/)
 
 <br />
 
