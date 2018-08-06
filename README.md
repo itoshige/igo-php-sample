@@ -36,12 +36,13 @@ git clone https://github.com/siahr/igo-php.git
 cd igo-php-sample/test/
 
 php FuriganizerTest1.php
-→以下のように、姓と名の間に半角スペースを入れて出力
-田中 洋子,タナカ ヨウコ
+→以下のように、漢字とフリガナの間にコロン(:),姓と名の間にカンマ(,)を入れて出力
+田中,洋子:タナカ,ヨウコ
 
 ## 姓と名の間にスペースがない場合の正解率を出力
 php FuriganizerTest2.php
 →以下のように、正解のひらがなとigo-phpが出力したひらがなを比較し正解数を、正解率として出力、正解の場合は右端に○を記載
+※比較のため、姓名の区切り文字を半角スペースに変換しています
 ...
 [expected]kanji:松元勇二 kana:マツモト ユウジ   [mesured]kanji:松元 勇二 kana:マツモト ユウジ    ○
 正解率:71.75	正解数:287	母数:400
