@@ -41,9 +41,9 @@ class Furiganizer {
 
             $furigana = rtrim($seimei->surface, ',');
 
-            // 漢字氏名に英数字が含まれている場合
-            if (!preg_match("/[a-zA-Z0-9]/", $seimei->feature)) {
-                $furigana = isset(explode(',', $features)[7]) ? explode(',', $features)[7] : rtrim($seimei->surface, ',');
+            // 漢字氏名に英数字が含まれていない場合
+            if (!preg_match("/[a-zA-Z0-9]/", $furigana)) {
+                $furigana = isset(explode(',', $features)[7]) ? explode(',', $features)[7] : $furigana;
             }
 
             $kana .= $furigana . DELIMITER;
